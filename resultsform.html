@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Wind Farm Site Analytics</title>
+ </head>
+ <body>
+ <h3>Location:</h3>
+ <div>{{ location }}</div>
+
+ <h3>Station:</h3>
+ <div><strong>{{ station }}</strong></div>
+ <h3>Predictions:</h3>
+ <div>{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+</div>
+
+ </div>
+ </div>
+ </body>
+</html>
